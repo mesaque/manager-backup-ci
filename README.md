@@ -1,1 +1,1 @@
-# manager-backup-ci
+# Auto Manager Backup for Continuous Integration
