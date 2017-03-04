@@ -1,0 +1,10 @@
+FROM debian:7.11
+
+MAINTAINER MadLab Team Maintainers "mesaque.s.silva@gmail.com"
+
+RUN apt-get update && \
+apt-get install -y wget tar git-core python python-dateutil python-magic vim
+
+RUN git clone https://github.com/s3tools/s3cmd /opt/s3cmd/ && \
+ln -s /opt/s3cmd/s3cmd /usr/bin/s3cmd
+ENTRYPOINT [ "/usr/bin/s3cmd" ]
